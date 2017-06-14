@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  cpacoind The Cpacoin Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: cpacoind
+# processname: cpacoind
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/cpacoind, see below
+if [ -f /etc/sysconfig/cpacoind ]; then
+        . /etc/sysconfig/cpacoind
+fi
+
+RETVAL=0
+
+prog=cpacoind
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/cpacoind
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/cpacoind}
+
+# cpacoind defaults to /usr/bin/cpacoind, override with BITCOIND_BIN
+cpacoind=${BITCOIND_BIN-/usr/bin/cpacoind}
+
+# cpacoind opts default to -disablewallet, override with BITCOIND_OPTS
+cpacoind_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $cpacoind $cpacoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

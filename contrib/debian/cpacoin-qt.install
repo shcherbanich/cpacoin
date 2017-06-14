@@ -1,0 +1,6 @@
+usr/local/bin/cpacoin-qt usr/bin
+share/pixmaps/cpacoin32.xpm usr/share/pixmaps
+share/pixmaps/cpacoin16.xpm usr/share/pixmaps
+share/pixmaps/cpacoin128.png usr/share/pixmaps
+debian/cpacoin-qt.desktop usr/share/applications
+debian/cpacoin-qt.protocol usr/share/kde4/services/

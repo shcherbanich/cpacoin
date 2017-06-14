@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/cpacoin_bg.qm</file>
+        <file alias="de">locale/cpacoin_de.qm</file>
+        <file alias="en">locale/cpacoin_en.qm</file>
+        <file alias="es">locale/cpacoin_es.qm</file>
+        <file alias="fi">locale/cpacoin_fi.qm</file>
+        <file alias="fr">locale/cpacoin_fr.qm</file>
+        <file alias="it">locale/cpacoin_it.qm</file>
+        <file alias="ja">locale/cpacoin_ja.qm</file>
+        <file alias="pl">locale/cpacoin_pl.qm</file>
+        <file alias="pt">locale/cpacoin_pt.qm</file>
+        <file alias="ru">locale/cpacoin_ru.qm</file>
+        <file alias="sk">locale/cpacoin_sk.qm</file>
+        <file alias="sv">locale/cpacoin_sv.qm</file>
+        <file alias="vi">locale/cpacoin_vi.qm</file>
+        <file alias="zh_CN">locale/cpacoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/cpacoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

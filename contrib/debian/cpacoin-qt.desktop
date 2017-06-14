@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Cpacoin
+Comment=Cpacoin P2P Cryptocurrency
+Comment[fr]=Cpacoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Cpacoin, eşten eşe kriptografik sanal para birimi
+Exec=cpacoin-qt %u
+Terminal=false
+Type=Application
+Icon=cpacoin128
+MimeType=x-scheme-handler/cpacoin;
+Categories=Office;Finance;
